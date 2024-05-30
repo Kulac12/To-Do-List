@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1>Görev Listesi</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Listeler</h2>
+            <ul id="task-lists">
+                <!-- Task lists will be added here dynamically -->
+            </ul>
+            <form id="new-list-form">
+                <input type="text" id="new-list-input" placeholder="Yeni Liste Ekle" />
+                <input type="submit" value="Liste Ekle" />
+            </form>
+        </aside>
+        <main class="main-content">
+            <section class="task-list">
+                <h2 id="list-title">Görevler</h2>
+                <div id="tasks">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+                <form id="new-task-form">
+                    <input type="text" id="new-task-input" placeholder="Yeni Görev Ekle" />
+                    <input type="submit" value="Görev Ekle" />
+                </form>
+            </section>
+        </main>
+    </div>
+    <div id="context-menu" class="context-menu">
+        <button id="edit-list" class="context-menu-item">Edit</button>
+        <button id="delete-list" class="context-menu-item">Delete</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
