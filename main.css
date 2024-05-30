@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: calc(100vh - 60px);
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.main-content {
+    flex: 3;
+    background: #fff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #555;
+}
+
+.task-list h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.task .content {
+    flex: 1;
+}
+
+.task .content input[type="text"] {
+    border: none;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.task .actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.task .actions .edit {
+    background: #333;
+    color: #fff;
+}
+
+.task .actions .delete {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.task .actions .edit:hover {
+    background: #555;
+}
+
+.task .actions .delete:hover {
+    background: #c0392b;
+}
+
+#task-lists li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#task-lists li:hover {
+    background: #ddd;
+}
+
+#task-lists .active {
+    background: #bbb;
+}
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.context-menu-item {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.context-menu-item:hover {
+    background: #f4f4f4;
+}
